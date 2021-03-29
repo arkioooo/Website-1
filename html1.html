@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Webpage</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet"> 
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style>
+body{
+	margin: 0;
+}
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  background-image: url('https://inteng-storage.s3.amazonaws.com/img/iea/Ne6NoL4Ww5/sizes/800px-faraday-michael-christmas-lecture-detail_resize_md.jpg');
+  height: 80%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#header{
+  position: absolute;
+  z-index: 1000;
+  top: 200px;
+  left: 400px;
+}
+h1:hover{
+	opacity: 85%;
+}
+.text-box{
+	height: 600px;
+	padding: 600px;
+}
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+
+p{
+	font-family: 'Work Sans', sans-serif;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 18px;
+	color: #213036;
+}
+h2{
+	font-family: 'Work Sans', sans-serif;
+	color: white;
+	text-align: center;
+	background-color: #213036;
+	padding: 10px;
+	text-transform: uppercase;
+}
+.footer{
+	background-color: #213036;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 25px;
+}
+.footer a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+.footer a:hover{
+	opacity: 95%;
+	text-decoration: underline;
+}
+i{
+	color: #213036;
+}
+::-moz-selection {
+  color: white;
+  background: #213036;
+}
+
+::selection {
+  color: white;
+  background: #213036;
+}
+div.gallery {
+  border: 1px solid #ccc;
+  font-family: 'Work Sans', sans-serif;
+  display: table-cell;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+  
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  display: table;
+  height: 70%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+hr{
+  background-color: #213036;
+  padding-top: 2px;
+  border: 1px solid #213036;
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+
+ a {
+    color: #03658c;
+    text-decoration: none;
+ }
+
+ul {
+    list-style-type: none;
+}
+
+.comments-container {
+	padding-left: 40px;
+    width: 768px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.comments-container h1 {
+    font-size: 36px;
+    color: #213036;
+    font-weight: 400;
+}
+
+.comments-container h1 a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.comments-list {
+    margin-top: 30px;
+    position: relative;
+}
+
+.comments-list:before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #213036;
+    position: absolute;
+    left: 32px;
+    top: 0;
+}
+
+.comments-list:after {
+    content: '';
+    position: absolute;
+    background: #213036;
+    bottom: 0;
+    left: 27px;
+    width: 7px;
+    height: 7px;
+    border: 3px solid #213036;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.reply-list:before, .reply-list:after {display: none;}
+.reply-list li:before {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: #213036;
+    position: absolute;
+    top: 25px;
+    left: -55px;
+}
+
+
+.comments-list li {
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+
+.comments-list li:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+}
+
+.reply-list {
+    padding-left: 88px;
+    clear: both;
+    margin-top: 15px;
+}
+.comments-list .comment-avatar {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    z-index: 99;
+    float: left;
+    border: 3px solid #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.comments-list .comment-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.reply-list .comment-avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.comment-main-level:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+}
+.comments-list .comment-box {
+    width: 680px;
+    float: right;
+    position: relative;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}
+
+.comments-list .comment-box:before, .comments-list .comment-box:after {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    border-width: 10px 12px 10px 0;
+    border-style: solid;
+    border-color: transparent #213036;
+    top: 8px;
+    left: -11px;
+}
+
+.comments-list .comment-box:before {
+    border-width: 11px 13px 11px 0;
+    border-color: transparent rgba(0,0,0,0.05);
+    left: -12px;
+    color:  white;
+}
+
+.reply-list .comment-box {
+    width: 610px;
+}
+.comment-box .comment-head {
+    background: #213036;
+    padding: 10px 12px;
+    border-bottom: 1px solid #E5E5E5;
+    overflow: hidden;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.comment-box .comment-head i {
+    float: right;
+    margin-left: 14px;
+    position: relative;
+    top: 2px;
+    color: white;
+    cursor: pointer;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.comment-box .comment-head i:hover {
+    color: white;
+}
+
+.comment-box .comment-name {
+    color: #213036;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+    margin-right: 10px;
+}
+
+.comment-box .comment-name a {
+    color: white;
+}
+
+.comment-box .comment-head span {
+    float: left;
+    color: white;
+    font-size: 13px;
+    position: relative;
+    top: 1px;
+}
+
+.comment-box .comment-content {
+    background: #FFF;
+    padding: 12px;
+    font-size: 15px;
+    color: #213036;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {color: white;}
+.comment-box .comment-name.by-author:after {
+    content: 'author';
+    background: white;
+    color: #213036;
+    font-size: 12px;
+    padding: 3px 5px;
+    font-weight: 700;
+    margin-left: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 766px) {
+    .comments-container {
+        width: 480px;
+    }
+
+    .comments-list .comment-box {
+        width: 390px;
+    }
+
+    .reply-list .comment-box {
+        width: 320px;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #213036;
+  color: white;
+  padding: 16px 24px;
+  cursor: pointer;
+  float: right;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid white;
+  font-size: 14px;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  color: #213036;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+::-webkit-input-placeholder { /* Edge */
+  font:'Montserrat', sans-serif;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  font:'Montserrat', sans-serif;
+}
+
+::placeholder {
+  font:'Montserrat', sans-serif;
+}
+</style>
+</head>
+<body>
+<div class="footer">
+	<b>BLOG PROJECT</b>
+	</div>
+
+<div class="parallax"></div>
+<h1 id="header" style="	background-color:black;color: white;font-family: 'Montserrat', sans-serif;opacity:83%;font-size:48px;padding: 20px;border: 5px; border-color: white;border-style: solid;"><b>MICHEAL FARADAY</b></h1>
+</div>
+<br>
+<br>
+<div style="padding-right: 35px;font:'Montserrat', sans-serif;color:#213036;float:right;clear:left;">
+<p style="font:'Work Sans', sans-serif;">10/10/2020 3:51 AM IST</p>
+<hr style="  float: right;width: 100%;">
+</div>
+<br>
+<br>
+<br>
+<br>
+<p>
+Michael Faraday was born on September 22, 1791 in London, England, UK. He was the third child of James and Margaret Faraday. His father was a blacksmith who suffered poor health. Before marriage, his mother had been a servant. The family lived in a degree of poverty.
+Michael Faraday attended a local school until he was 13, where he received a basic education. To earn money for the family he started working as a delivery boy for a bookshop. He worked hard and impressed his employer. After a year, he was promoted to become an apprentice bookbinder.
+</p>
+<p>
+Michael Faraday was eager to learn more about the world – he did not restrict himself to binding the shop’s books. After working hard each day, he spent his free time reading the books he had bound. Gradually, he found he was reading more and more about science. He became so fascinated that he started spending part of his meager pay on chemicals and apparatus to confirm the truth of what he was reading.
+<br>
+<br>
+As he learned more about science, he heard that the well-known scientist John Tatum was going to give a series of public lectures on natural philosophy (physics). To attend the lectures the fee would be one shilling – too much for Michael Faraday. His older brother, a blacksmith, impressed by his brother’s growing devotion to science, gave him the shilling he needed.
+</p>
+<div style="padding-left: 30px;padding-right: 30px;">
+	<p><b>*This video requires you to play it in another tab*</b></p>
+<iframe width="60%" height="420" src="https://www.youtube.com/watch?v=TG__fe_FNf4">
+</iframe>
+</div>
+<br>
+<p>
+Faraday’s education took another step upward when William Dance, a customer of the bookshop, asked if he would like tickets to hear Sir Humphry Davy lecturing at the Royal Institution. Sir Humphry Davy was one of the most famous scientists in the world. Faraday jumped at the chance and attended four lectures about one of the newest problems in chemistry – defining acidity. He watched Davy perform experiments at the lectures.
+<br><br>
+This was the world he wanted to live in, he told himself. He took notes and then made so many additions to the notes that he produced a 300 page handwritten book, which he bound and sent to Davy as a tribute.
+</p>
+<br>
+<br>
+<h2>Michael Faraday’s Scientific Achievements and Discoveries</h2>
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.famousscientists.org/fs/wp-content/uploads/2014/11/michael-faraday-electromagnetic-rotations.png" width="600" height="350">
+    <div class="desc">1821: Discovery of Electromagnetic Rotation</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.famousscientists.org/fs/wp-content/uploads/2014/11/refrigerator.png" width="600" height="400">
+    <div class="desc">1823: Gas Liquefaction and Refrigeration</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.famousscientists.org/fs/wp-content/uploads/2014/11/benzene.png" width="600" height="400">
+    <div class="desc">Discovery of Benzene</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.famousscientists.org/fs/wp-content/uploads/2014/11/electromagentic-induction-horseshoe.jpg" width="600" height="400">
+    <div class="desc">Discovery of Electromagnetic Induction</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+<br>
+<br>
+<div style="padding-left: 30px;padding-right: 30px;">
+<p><b>*This video requires you to play it in another tab*</b></p>
+<iframe width="60%" height="420" src="https://www.youtube.com/watch?v=32_3Um3a65s">
+</iframe>
+</div>
+<br>
+<br>
+<p>
+And then there was a fortunate (for Faraday) accident. Sir Humphry Davy was hurt in an explosion when an experiment went wrong: this temporarily affected his ability to write. Faraday managed to get work for a few days taking notes for Davy, who had been impressed by the book Faraday had sent him. There were some advantages to being a bookbinder after all! When his short time as Davy’s note-taker ended, Faraday sent a note to Davy, asking if he might be employed as his assistant. Soon after this, one of Davy’s laboratory assistants was fired for misconduct, and Davy sent a message to Faraday asking him if he would like the job of chemical assistant.
+</p>
+<p>
+Faraday began work at the Royal Institution of Great Britain at the age of 21 on March 1, 1813.
+<br>
+His salary was good, and he was given a room in the Royal Institution’s attic to live in. He was very happy with the way things had turned out. He was destined to be associated with the Royal Institution for 54 years, ending up as a Professor of Chemistry. His first job was as a chemical assistant, preparing apparatus for experiments and lectures. This involved working with nitrogen trichloride, the explosive which had already injured Davy. Faraday himself was knocked unconscious briefly by another nitrogen chloride explosion, and then Davy was injured again, finally putting to an end to work with that particular substance.
+</p>
+<br>
+<br>
+<p>Michael Faraday died aged 75 on August 25, 1867 in London. He was survived by his wife Sarah. They had no children. He had been a devout Christian all of his life, belonging to a small branch of the religion called Sandemanians.
+
+During his life, he was offered burial in Westminster Abbey along with Britain’s kings and queens and scientists of the stature of Isaac Newton. He turned this down, in favor of a more modest resting place. His grave, where Sarah is also buried, can still be seen in London’s Highgate Cemetery. </p>
+<br>
+<br>
+<div style="padding-left: 20px;">
+<hr style="float: left;width: 70%;">
+</div>
+<br>
+<br>
+<div class="comments-container">
+        <h1>What others think</h1>
+
+        <ul id="comments-list" class="comments-list">
+            <li>
+                <div class="comment-main-level">
+                    
+                    <div class="comment-avatar"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QBhMREhAQEhMQExASDxEPDREQEg4RFRMXFhUTFxUYHSghGBolHRMVITEhJSkrLi4uGB8zODYsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQQFAwIH/8QANBABAAEBBAgFAgUFAQAAAAAAAAECAwQRIQUSMUFRYXGRIoGxwdEzoSQ0QoLhUpKy8PEy/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APqIAAAAAAAAAAAAAAAAAAAAAAAAAAAISAAAAAAAAAAOdrbU0xnPltnsDoM+10hP6Yw5zn9lWu2qq21T3y7A2cTGGEA3hhRMxsnB0ovFcbKp85x9QbIoWN/z8UecfC9E4wCQAAAAAAAAAQkAAAAAAACRQ0hb56kfu+AReb7nhR/d8KUzmAAhIAAAAC3YX7Vsop1ccN+sqAL0aRzzo7VfwuWVpFVGMbJYqzcLbVtcJ2VfadwNQAAAAAAAAQkAAAAAAEVThTjwzYlVWNUzO/NrXycLtV0w75MgAAAAAAAAAAAAGzYV61jE8Yz673RU0bV+H6TPytgAAAAAAAAAAAAAAraQ/Kz5erLamkPy09Y9WWAAAAAAAAAAAAC/oufDVHT3XmdoyfHV0hogAAAAAAAAAAAAAAr6Qj8LPl6sltW9GtYzHGMuu5jAAAAAAAAAAAAAuaM+pPSPVoqOi6fBVPGYjt/1eAAAAAABCQAAAAAAB4tbSKacZnCGTeZibeZp2Tn32ruk/pR19mcAAAAAAAAAAAmiiZqwjbKEA2rCz1bKI4bec73RXuNUzdox3YwsAAAAAAACEgAAAAAAq6Rpxu3SYn292Y27SjWs5jjEwxJjMAAAAAAAAAAAE0041xHGYjuDVuVOF2p5593dERhGHBIAAAAAAAAAAAAAADIvtGreZ55x57fu1wGEOl5pwvFUc57TnHq5ghIAAAAAAAO1yoxvMcs58nKiMa4jjMQ3AAAAAAAAAQkAAAAAAAAAUdJWWUVcMp6blBt2lEVUTE74wYtVOFUxwyBAAAAAAAALWj7LG11t1Pq03G6Werd455z1l2AAAAAAAAAAAAAAAAAAAZV/pwvM84if97NVl6Rn8T0iPcFYAAAAEAkiMx6s/qR1j1BtgAAAAAAAAAAAAAAAAAAAMa9VY3irrh2y9mjeb1FNOEZ1cOHVlAAAAAAAETnjwAG5TOMY8c0s653uIp1atm6eHKWhE5AkAAAAAAAAAAAAAAVba+007PFPLZ3Uba8VV7Zy4RlAL9tfaadninls7qVre66t+EcIy+7gAhIAAAAAAAAAPdlbVU7JmOW7s8AL1npD+qnzp+JWrK8UVbJ8pyljgN0Y9lea6dk5cJzhcsb/AEz/AOvDz2wC4IicYy+yQAAAAAUb3fP00+dXDoDveL1TRznh88GbbXiquc5y4Rsc94AAACASAAAAAAAAAAAAAAAD3Y21VE5T5bpX7C/UzlV4Z+38M0BuwMi73mqieMcPhq0VRNMTGydgPQAPFr9Oek+jESAhIAidiQBAkBCQBG9IAAAISAAAAAAAhIAhIANW4flKf3f5SkB2AB//2Q==" alt=""></div>
+                    
+                    <div class="comment-box">
+                        <div class="comment-head">
+                            <h6 class="comment-name"><a href="#">Mahesh Rajput</a></h6>
+                            <span>4 hours ago</span>
+                            <i class="fa fa-reply"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="comment-content">
+                            After reading this, I was able to discover another scientist who had contributed a lot to thier field but were never celebrated for their achievments.
+                        </div>
+                    </div>
+                </div>
+              
+                <ul class="comments-list reply-list">
+                    <li>
+                        <!-- Avatar -->
+                        <div class="comment-avatar"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QBhMREhAQEhMQExASDxEPDREQEg4RFRMXFhUTFxUYHSghGBolHRMVITEhJSkrLi4uGB8zODYsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQQFAwIH/8QANBABAAEBBAgFAgUFAQAAAAAAAAECAwQRIQUSMUFRYXGRIoGxwdEzoSQ0QoLhUpKy8PEy/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APqIAAAAAAAAAAAAAAAAAAAAAAAAAAAISAAAAAAAAAAOdrbU0xnPltnsDoM+10hP6Yw5zn9lWu2qq21T3y7A2cTGGEA3hhRMxsnB0ovFcbKp85x9QbIoWN/z8UecfC9E4wCQAAAAAAAAAQkAAAAAAACRQ0hb56kfu+AReb7nhR/d8KUzmAAhIAAAAC3YX7Vsop1ccN+sqAL0aRzzo7VfwuWVpFVGMbJYqzcLbVtcJ2VfadwNQAAAAAAAAQkAAAAAAEVThTjwzYlVWNUzO/NrXycLtV0w75MgAAAAAAAAAAAAGzYV61jE8Yz673RU0bV+H6TPytgAAAAAAAAAAAAAAraQ/Kz5erLamkPy09Y9WWAAAAAAAAAAAAC/oufDVHT3XmdoyfHV0hogAAAAAAAAAAAAAAr6Qj8LPl6sltW9GtYzHGMuu5jAAAAAAAAAAAAAuaM+pPSPVoqOi6fBVPGYjt/1eAAAAAABCQAAAAAAB4tbSKacZnCGTeZibeZp2Tn32ruk/pR19mcAAAAAAAAAAAmiiZqwjbKEA2rCz1bKI4bec73RXuNUzdox3YwsAAAAAAACEgAAAAAAq6Rpxu3SYn292Y27SjWs5jjEwxJjMAAAAAAAAAAAE0041xHGYjuDVuVOF2p5593dERhGHBIAAAAAAAAAAAAAADIvtGreZ55x57fu1wGEOl5pwvFUc57TnHq5ghIAAAAAAAO1yoxvMcs58nKiMa4jjMQ3AAAAAAAAAQkAAAAAAAAAUdJWWUVcMp6blBt2lEVUTE74wYtVOFUxwyBAAAAAAAALWj7LG11t1Pq03G6Werd455z1l2AAAAAAAAAAAAAAAAAAAZV/pwvM84if97NVl6Rn8T0iPcFYAAAAEAkiMx6s/qR1j1BtgAAAAAAAAAAAAAAAAAAAMa9VY3irrh2y9mjeb1FNOEZ1cOHVlAAAAAAAETnjwAG5TOMY8c0s653uIp1atm6eHKWhE5AkAAAAAAAAAAAAAAVba+007PFPLZ3Uba8VV7Zy4RlAL9tfaadninls7qVre66t+EcIy+7gAhIAAAAAAAAAPdlbVU7JmOW7s8AL1npD+qnzp+JWrK8UVbJ8pyljgN0Y9lea6dk5cJzhcsb/AEz/AOvDz2wC4IicYy+yQAAAAAUb3fP00+dXDoDveL1TRznh88GbbXiquc5y4Rsc94AAACASAAAAAAAAAAAAAAAD3Y21VE5T5bpX7C/UzlV4Z+38M0BuwMi73mqieMcPhq0VRNMTGydgPQAPFr9Oek+jESAhIAidiQBAkBCQBG9IAAAISAAAAAAAhIAhIANW4flKf3f5SkB2AB//2Q==" alt=""></div>
+                       
+                        <div class="comment-box">
+                            <div class="comment-head">
+                                <h6 class="comment-name"><a href="#">Rhea Bhatt</a></h6>
+                                <span>3 hours ago</span>
+                                <i class="fa fa-reply"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="comment-content">
+                                Yes! Indeed! 
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                       
+                        <div class="comment-avatar"><img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt=""></div>
+                      
+                        <div class="comment-box">
+                            <div class="comment-head">
+                                <h6 class="comment-name by-author"><a href="#">Mridul Sharma</a></h6>
+                                <span>1 hour ago</span>
+                                <i class="fa fa-reply"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="comment-content">
+                                Yes, he was overshadowed by his counterparts despite his talent.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="comment-main-level">
+                
+                    <div class="comment-avatar"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QBhMREhAQEhMQExASDxEPDREQEg4RFRMXFhUTFxUYHSghGBolHRMVITEhJSkrLi4uGB8zODYsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQQFAwIH/8QANBABAAEBBAgFAgUFAQAAAAAAAAECAwQRIQUSMUFRYXGRIoGxwdEzoSQ0QoLhUpKy8PEy/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APqIAAAAAAAAAAAAAAAAAAAAAAAAAAAISAAAAAAAAAAOdrbU0xnPltnsDoM+10hP6Yw5zn9lWu2qq21T3y7A2cTGGEA3hhRMxsnB0ovFcbKp85x9QbIoWN/z8UecfC9E4wCQAAAAAAAAAQkAAAAAAACRQ0hb56kfu+AReb7nhR/d8KUzmAAhIAAAAC3YX7Vsop1ccN+sqAL0aRzzo7VfwuWVpFVGMbJYqzcLbVtcJ2VfadwNQAAAAAAAAQkAAAAAAEVThTjwzYlVWNUzO/NrXycLtV0w75MgAAAAAAAAAAAAGzYV61jE8Yz673RU0bV+H6TPytgAAAAAAAAAAAAAAraQ/Kz5erLamkPy09Y9WWAAAAAAAAAAAAC/oufDVHT3XmdoyfHV0hogAAAAAAAAAAAAAAr6Qj8LPl6sltW9GtYzHGMuu5jAAAAAAAAAAAAAuaM+pPSPVoqOi6fBVPGYjt/1eAAAAAABCQAAAAAAB4tbSKacZnCGTeZibeZp2Tn32ruk/pR19mcAAAAAAAAAAAmiiZqwjbKEA2rCz1bKI4bec73RXuNUzdox3YwsAAAAAAACEgAAAAAAq6Rpxu3SYn292Y27SjWs5jjEwxJjMAAAAAAAAAAAE0041xHGYjuDVuVOF2p5593dERhGHBIAAAAAAAAAAAAAADIvtGreZ55x57fu1wGEOl5pwvFUc57TnHq5ghIAAAAAAAO1yoxvMcs58nKiMa4jjMQ3AAAAAAAAAQkAAAAAAAAAUdJWWUVcMp6blBt2lEVUTE74wYtVOFUxwyBAAAAAAAALWj7LG11t1Pq03G6Werd455z1l2AAAAAAAAAAAAAAAAAAAZV/pwvM84if97NVl6Rn8T0iPcFYAAAAEAkiMx6s/qR1j1BtgAAAAAAAAAAAAAAAAAAAMa9VY3irrh2y9mjeb1FNOEZ1cOHVlAAAAAAAETnjwAG5TOMY8c0s653uIp1atm6eHKWhE5AkAAAAAAAAAAAAAAVba+007PFPLZ3Uba8VV7Zy4RlAL9tfaadninls7qVre66t+EcIy+7gAhIAAAAAAAAAPdlbVU7JmOW7s8AL1npD+qnzp+JWrK8UVbJ8pyljgN0Y9lea6dk5cJzhcsb/AEz/AOvDz2wC4IicYy+yQAAAAAUb3fP00+dXDoDveL1TRznh88GbbXiquc5y4Rsc94AAACASAAAAAAAAAAAAAAAD3Y21VE5T5bpX7C/UzlV4Z+38M0BuwMi73mqieMcPhq0VRNMTGydgPQAPFr9Oek+jESAhIAidiQBAkBCQBG9IAAAISAAAAAAAhIAhIANW4flKf3f5SkB2AB//2Q==" alt=""></div>
+                    <div class="comment-box">
+                        <div class="comment-head">
+                            <h6 class="comment-name"><a href="http://creaticode.com/blog">Guru Sarath</a></h6>
+                            <span>20 minutes ago</span>
+                            <i class="fa fa-reply"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="comment-content">
+                            All great scientists belonged from well-to-do families and recvied formal education. BUt Faraday, despite being a pauper, excelled even the learned scientists without any school after the age of 13. Huge respect!
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+<br>
+<div style="padding-left: 20px;">
+<hr style="float: left;width: 70%;">
+</div>
+<br>
+<h1 style="font-family: 'Montserrat', sans-serif;border-left: 21px solid white;">Add your comment!</h1>
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Country</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Subject</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="What do you think.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+<br>
+<div class="footer">
+	Project by <b>Arkiooo <3</b>
+	</div>
+</body>
+</html>
